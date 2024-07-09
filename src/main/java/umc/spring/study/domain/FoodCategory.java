@@ -12,15 +12,11 @@ import umc.spring.study.domain.common.BaseEntity;
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-public class Store extends BaseEntity {
+public class FoodCategory extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
-
-    private String address;
-
-    private Float score1;
 }

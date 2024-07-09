@@ -1,8 +1,6 @@
 package umc.spring.study.web.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.aspectj.apache.bcel.classfile.Code;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,6 +19,7 @@ public class TempRestController {
 
     @GetMapping("/test")
     public ApiResponse<TempResponse.TempTestDTO> testAPI(){
+
         return ApiResponse.onSuccess(TempConverter.toTempTestDTO());
     }
 

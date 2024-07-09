@@ -2,12 +2,13 @@ package umc.spring.study.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
-import umc.spring.study.domain.mapping.MemberMission;
 import umc.spring.study.domain.common.BaseEntity;
+import umc.spring.study.domain.mapping.MemberMission;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+
 
 @Entity
 @Getter

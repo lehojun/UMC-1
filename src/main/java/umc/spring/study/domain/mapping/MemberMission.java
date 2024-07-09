@@ -2,10 +2,11 @@ package umc.spring.study.domain.mapping;
 
 import jakarta.persistence.*;
 import lombok.*;
+import umc.spring.study.domain.FoodCategory;
 import umc.spring.study.domain.Member;
 import umc.spring.study.domain.Mission;
-import umc.spring.study.domain.enums.MissionStatus;
 import umc.spring.study.domain.common.BaseEntity;
+import umc.spring.study.domain.enums.MissionStatus;
 
 @Entity
 @Getter
@@ -24,6 +25,10 @@ public class MemberMission extends BaseEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
     private Member member;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id")
+    private FoodCategory foodCategory;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "mission_id")

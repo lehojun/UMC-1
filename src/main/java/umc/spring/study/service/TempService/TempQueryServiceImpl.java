@@ -9,11 +9,12 @@ import umc.spring.study.apiPayload.exception.handler.TempHandler;
 @Primary
 @Service
 @RequiredArgsConstructor
-public class TempQueryServiceImpl implements TempQueryService{
+public class TempQueryServiceImpl implements TempQueryService {
 
     @Override
     public void CheckFlag(Integer flag) {
-        if (flag == 1)
+        if (flag == 1) {
             throw new TempHandler(ErrorStatus.TEMP_EXCEPTION);
+        }
     }
 }

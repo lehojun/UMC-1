@@ -10,12 +10,8 @@ import umc.spring.study.apiPayload.code.ReasonDTO;
 @AllArgsConstructor
 public enum SuccessStatus implements BaseCode {
 
-    // 일반적인 응답
-    _OK(HttpStatus.OK, "COMMON200", "성공입니다.");
-
-    // 멤버 관련 응답
-
-    // ~~~ 관련 응답
+    _OK(HttpStatus.OK, "SUCCESS200", "요청이 성공적으로 처리되었습니다."),
+    _CREATED(HttpStatus.CREATED, "SUCCESS201", "자원이 성공적으로 생성되었습니다.");
 
     private final HttpStatus httpStatus;
     private final String code;
@@ -37,7 +33,6 @@ public enum SuccessStatus implements BaseCode {
                 .code(code)
                 .isSuccess(true)
                 .httpStatus(httpStatus)
-                .build()
-                ;
+                .build();
     }
 }
