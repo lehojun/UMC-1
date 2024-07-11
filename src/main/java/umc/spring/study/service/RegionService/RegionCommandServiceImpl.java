@@ -14,10 +14,6 @@ public class RegionCommandServiceImpl implements RegionCommandService{
 
     @Override
      public Region addRegion(Long region) {
-        if (region == 1) {
-            System.out.println("최선규");
-            
-        }
 
         return regionRepository.findById(region).get();
     }
