@@ -29,4 +29,4 @@ public class MemberRequestDTO {
         @ExistCategories
         List<Long> preferCategory;
     }
-}
+}   
